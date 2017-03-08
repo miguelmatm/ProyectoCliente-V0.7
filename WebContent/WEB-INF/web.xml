@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+ 
+ 
+  <display-name>Cliente</display-name>
+  
+  
+  
+  	<listener>
+		<listener-class>Listener.SessionListener</listener-class>
+	</listener>
+	
+	<context-param>
+		<param-name>dbHostname</param-name>
+		<param-value>jdbc:postgresql://ns3034756.ip-91-121-81.eu/mtalavera?currentSchema=proyecto</param-value>
+	</context-param>
+	<context-param>
+		<param-name>dbDatabase</param-name>
+		<param-value>mtalavera</param-value>
+	</context-param>
+	<context-param>
+		<param-name>dbUsername</param-name>
+		<param-value>mtalavera</param-value>
+	</context-param>
+	<context-param>
+		<param-name>dbPassword</param-name>
+		<param-value>mtalavera</param-value>
+	</context-param>
+  
+  <servlet>
+    <servlet-name>Cliente</servlet-name>
+    <servlet-class>PControlador.ServletIndex</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Cliente</servlet-name>
+    <url-pattern>Cliente</url-pattern>
+  </servlet-mapping>  
+  
+  <servlet>
+    <display-name>ProyectoActivarCuenta</display-name>
+    <servlet-name>ProyectoActivarCuenta</servlet-name>
+    <servlet-class>PControlador.ServletActivacionCuenta</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ProyectoActivarCuenta</servlet-name>
+    <url-pattern>ProyectoActivarCuenta</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+   <servlet>
+    <display-name>Servicios</display-name>
+    <servlet-name>Servicios</servlet-name>
+    <servlet-class>PControlador.ServletServicio</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Servicios</servlet-name>
+    <url-pattern>Servicios</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+   <servlet>
+    <display-name>Proyectos</display-name>
+    <servlet-name>Proyectos</servlet-name>
+    <servlet-class>PControlador.ServletProyecto</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Proyectos</servlet-name>
+    <url-pattern>Proyectos</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  <servlet>
+    <display-name>Contacto</display-name>
+    <servlet-name>Contacto</servlet-name>
+    <servlet-class>PControlador.ServletContacto</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Contacto</servlet-name>
+    <url-pattern>Contacto</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+   <servlet>
+    <display-name>Perfil</display-name>
+    <servlet-name>Perfil</servlet-name>
+    <servlet-class>PControlador.ServletPerfil</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Perfil</servlet-name>
+    <url-pattern>Perfil</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  <servlet>
+    <display-name>RePassword</display-name>
+    <servlet-name>RePassword</servlet-name>
+    <servlet-class>PControlador.ServletRePassword</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>RePassword</servlet-name>
+    <url-pattern>RePassword</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
